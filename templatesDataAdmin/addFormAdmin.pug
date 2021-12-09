@@ -1,0 +1,91 @@
+html 
+    head 
+        title Sistem Informasi f
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css' rel='stylesheet')
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js')
+    body(style="background-color:#008181")
+
+        nav(class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top")
+            div(class="container-fluid")
+                a(class="navbar-brand" href="/main") Home
+                    button(class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar")
+
+                    div(class="collapse navbar-collapse" id="collapsibleNavbar")
+                        ul(class="navbar-nav")
+                            li(class="nav-item")
+                                 a(class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#myModal") Info
+                            li(class="nav-item")
+                                a(class="nav-link" href="/tamu") Tamu
+                            li(class="nav-item")
+                                a(class="nav-link" href="/ow") Wisata
+                            li(class="nav-item dropdown")
+                                a(class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown") Group
+                                ul(class="dropdown-menu")
+                                    li
+                                        a(class="dropdown-item" href="https://www.siamiruyelindo.ac.id/index.php") Si amir
+                                    li
+                                        a(class="dropdown-item" href="https://web.telegram.org/z/") Telegram
+                                    li
+                                        a(class="dropdown-item" href="https://web.whatsapp.com/") Whatsapp
+
+        div(class="modal" id="myModal")
+            div(class="modal-dialog modal-dialog-centered")
+                div(class="modal-content")
+
+                    div(class="modal-header")
+                        h4(class="modal-title") Judul
+                        button(type="button" class="btn-close" data-bs-dismiss="modal")
+                    div(class="modal-body")
+                        p Informasi belum tersedia
+                    div(class="modal-footer")
+                        button(type="button" class="btn btn-danger" data-bs-dismiss="modal") Close
+        div(class="container  p-5 my-5 bg-white text-dark")
+            div(class="row")
+                div(class="col-sm-6")
+                    img(src="./asset/11.jpg" class="img-thumbnail" alt="Cinque Terre" width="570    " height="236") 
+                    h3 Petunjuk
+                    p Silahkan  lengkapi data pengguna berikut. Pastikan data yang Anda isi adalah benar. Terima kasih
+
+                    div(class="toast show")
+                        div(class="toast-header")
+                            strong(class="me-auto") Informasi Tambahan
+                            button(type="button" class="btn-close" data-bs-dismiss="toast")
+                        div(class="toast-body")
+                            p Gunakan Id Admin yang sudah terdaftar
+                            p Masukan nama lengkap anda
+                            p Gunakan nomor telepon yang masih aktif
+                            p Jangan memberi tahu password anda ke siapapun
+
+                div(class="col-sm-6")
+                    div(class="alert alert-info")
+                        h1 Tambah Data Admin
+                    form(action="/add" method="post")
+
+                        div(class="input-group mb-3")
+                            span(class="input-group-text") Id Admin
+                            input(type="number" name="id_admin" class="form-control" required)
+
+                        div(class="input-group mb-3")
+                            span(class="input-group-text") Nama 
+                            input(type="text" name="nama" class="form-control" required)
+
+                        div(class="input-group mb-3")
+                            span(class="input-group-text") Alamat
+                            input(type="text" name="alamat" class="form-control" required)
+
+                        div(class="input-group mb-3")
+                            span(class="input-group-text") Telepon
+                            input(type="text" name="telepon" class="form-control" required)
+
+                        div(class="input-group mb-3")
+                            span(class="input-group-text") Email
+                            input(type="email" name="email" class="form-control" required)
+
+                        div(class="input-group mb-3")
+                            span(class="input-group-text") Password
+                            input(type="text" name="password" class="form-control" required)
+
+                        div(style="margin-top: 10px")
+                            input(type="submit" value="Simpan" class="btn btn-success")
+                            input(type="button" value="Batal" onClik="javascript:history.go(-1);" class="btn btn-info")

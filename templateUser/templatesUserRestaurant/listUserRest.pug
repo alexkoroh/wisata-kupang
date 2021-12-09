@@ -1,0 +1,114 @@
+html 
+    head
+        title Priwisata
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        script(src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous')
+        link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet")
+        link(rel="stylesheet" href="style/style.css")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+        script(src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous") 
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js")
+        style.
+            .fakeimg {
+            height: 200px;
+            background: #aaa;
+            }
+
+
+//! Bagian Content..................................................................................... 
+body(class="usa")
+        div(class="container" )
+             nav(class="navbar navbar-expand-sm bg-dark navbar-dark")
+                    a(class="navbar-brand" href="#")
+                    div(class="collapse navbar-collapse" id="collapsibleNavbar")
+                        ul(class="navbar-nav")
+                            div(class="user")
+                                li(class="nav-item")
+                                    i(class='fas fa-utensils mt-1' style='font-size:30px;color: #F75C03; margin-left:20%;') &nbsp; 
+                        ul(class="navbar-nav")
+                            div(class="user")
+                                li(class="nav-item")
+                                i(class="nav-link"  ) Restaurant 
+                            li(class="nav-item mt-1")
+                                a(class="nav-link" href="/") Home 
+                            li(class="nav-item mt-1")
+                                a(class="nav-link" href="/userpeng") Penginapan
+                    div(class="p-2 me-auto")
+                        ul(class="navbar-nav")
+
+
+
+        div(class="container" )                           
+            div(id="demo" class="carousel slide" data-bs-ride="carousel")
+                    <!-- Indicators/dots -->
+                        div(class="carousel-indicators")
+                            button(type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active")
+                            button(type="button" data-bs-target="#demo" data-bs-slide-to="1")
+                            button(type="button" data-bs-target="#demo" data-bs-slide-to="2")
+
+                    <!-- The slideshow/carousel -->
+                        div(class="carousel-inner")
+                            div(class="carousel-item active")
+                                img(src="./asset/SlideRestaurant/01.jpg"  alt="Los Angeles" fixed-top class="d-block" style="width:100%;" height="450")
+                                div(class="carousel-caption")
+                                    h2 Restaurant
+                                    p Waktu yang pas dan tempat yang tepat !
+                            div(class="carousel-item")
+                                img(src="./asset/SlideRestaurant/02.jpg" alt="Los Angeles" fixed-top class="d-block" style="width:100%" height="450")
+                                div(class="carousel-caption")
+                                    h2 Restaurant
+                                    p Terimakasih, Baun !
+                            div(class="carousel-item")
+                                img(src="././asset/SlideRestaurant/03.jpg" alt="Los Angeles" fixed-top class="d-block" style="width:100%" height="450")
+                                div(class="carousel-caption")
+                                    h2 Restaurant
+                                    p Waktu yang pas dan tempat yang tepat !
+                            div(class="carousel-item")
+                                img(src="./asset/tm4.jpg" alt="Los Angeles" fixed-top class="d-block" style="width:100%" height="450")
+                                div(class="carousel-caption")
+                                    h2 Restaurant
+                                    p Waktu yang pas dan tempat yang tepat !
+
+                        <!-- Left and right controls/icons -->
+                            button(class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev")
+                                span(class="carousel-control-prev-icon")
+                            button(class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next")
+                                span(class="carousel-control-next-icon")
+
+
+
+            div(class=" mt-1")
+                marquee(scrollamount='9' bgcolor='#F75C03' style="box-shadow: 2px 2px 2px rgba(0,0,0,0.8);" )
+                    h6 
+                        i(class='fas fa-utensils' style='font-size:24px')
+                            i &nbsp;Selamat datang.... Daftar Restaurant
+                            
+            h3.mt-4(style="margin-left:50px") Restaurant
+
+            div(class="wisata")
+                div(style="margin-left:30px")
+                    div.row.mt-4()
+                        each retaurant in retaurans 
+                            .card.mb-3.col-lg-2.col-md-4(style=" background-color: #FCFDFC;")
+                                img.card-img-top(src="/uploads/" + retaurant.gambar width="auto" ) 
+                                .card-body
+                                    h5.card-title #{retaurant['nama_rest']}
+                                    p(class="" style="color: #F75C03;") Lokasi #{retaurant['lokasi_rest']}
+                                    p.card-text  #{retaurant['deskripsi']}
+                                        center
+                                          button(type="button" class="btn btn-primary") pesan
+        
+
+                p
+                .mt-5.p-2.bg-dark.text-white.text-center
+                    i(class='fab fa-js-square' style='font-size:30px;color:yellow')
+                    p Copyright 2021.alexander          
+
+
+
+
+
+
+                        

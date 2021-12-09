@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*
+    DEMO STYLE
+*/
+
+
+/* Bagian Style untuk templates user  */
+
+div.gaya{
+    background-color: #ffff;
+    font-family: 'Poppins', sans-serif;
+    color: #2D2D2D;
+    font-size: 14px;
+}
+/* .modal-content{
+  background-image: url('../asset/log.jpg');
+} */
+.modal-title{
+  color: black  ;
+}
+div.bttn{
+  margin-left: 70%;
+
+}
+
+div.user{
+    font-size: 20;
+}
+
+div.judul{
+    font-family: 'Poppins', sans-serif;
+}
+
+body.usa{
+/* background-color: #eb7a34;     */
+background-image: url('../asset/bg11.jpg');
+-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+body.login{
+  background-image: url('../asset/bali-volcano-lead.jpg');
+  
+}
+
+
+coba{
+  background-color: darkgoldenrod;
+  
+}
+h6.huruf{
+  font-family: 'Poppins', sans-serif;
+
+}
+.container{
+  background-color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.containerLogin{
+  background-image: url('../asset/bali-volcano-lead.jpg');
+  box-shadow: 15px 15px 15px;
+    padding: 10px;
+    border: 2px solid grey;
+  text-shadow: 4px 2px 1px grey;
+   font-size: 25px;
+   font-family: 'Poppins', sans-serif;
+   margin: 0 auto;
+   margin-top: 15%;
+   width: 760px;
+   
+  }
+  
+  
+  
+  div.grid-container{
+  grid-template-columns: auto auto auto;
+  /* background-color: #a6bfd3; */
+  padding: 10px;
+}
+
+
+
+div.wisata img{
+  color: rgb(255, 255, 255);
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.8);
+
+}
+/* div.wisata:hover img{
+  -webkit-transform:scale(1.2);
+  -moz-transform:scale(1.2);
+  -o-transform:scale(1.2);
+  opacity: 1; z-index: 2;
+} */
+
+
+
+marquee{
+  /* opacity: 0.7; */
+  color: rgb(255, 255, 255);
+  } 
+
+  div.card{
+  font-family: 'Poppins', sans-serif;
+  background-color:#CDFFFE;
+  font-style: italic  ;
+  margin-left: 30px;
+}
+div.atas{
+  background-color: #F89303;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+}
+
+
+
+konten{
+    background-color: blue;
+}
+
+
+body a:hover{
+    background-color: lightskyblue;
+    color: white;
+    padding: 2px;
+
+}
+row{
+    position: center;
+}
+
+
+/* Bagian style untuk templates admin */
+.sidebar-container {
+    position: fixed;
+    width: 220px;
+    height: 100%;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #1a1a1a;
+    color: #fff;
+  }
+  
+  .content-container {
+    padding-top: 20px;
+  }
+  
+  .sidebar-logo {
+    padding: 10px 15px 10px 30px;
+    font-size: 20px;
+    background-color: #2574A9;
+  }
+  
+  .sidebar-navigation {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: relative;
+  }
+  
+  .sidebar-navigation li {
+    background-color: transparent;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    line-height: 20px;
+  }
+  
+  .sidebar-navigation li a {
+    padding: 10px 15px 10px 30px;
+    display: block;
+    color: #fff;
+  }
+  
+  .sidebar-navigation li .fa {
+    margin-right: 10px;
+  }
+  
+  .sidebar-navigation li a:active,
+  .sidebar-navigation li a:hover,
+  .sidebar-navigation li a:focus {
+    text-decoration: none;
+    outline: none;
+  }
+  
+  .sidebar-navigation li::before {
+    background-color: #2574A9;
+    position: absolute;
+    content: '';
+    height: 100%;
+    left: 0;
+    top: 0;
+    -webkit-transition: width 0.2s ease-in;
+    transition: width 0.2s ease-in;
+    width: 3px;
+    z-index: -1;
+  }
+  
+  .sidebar-navigation li:hover::before {
+    width: 100%;
+  }
+  
+  .sidebar-navigation .header {
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: #151515;
+    padding: 10px 15px 10px 30px;
+  }
+  
+  .sidebar-navigation .header::before {
+    background-color: transparent;
+  }
+  
+  .content-container {
+    padding-left: 220px;
+  }
+
+
+
+
+ 
+

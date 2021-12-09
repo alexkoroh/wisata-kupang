@@ -1,0 +1,74 @@
+html 
+    head 
+        title Sistem Informasi Pariwisata
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css' rel='stylesheet')
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js')
+body(style="background-color:#008181")
+
+    nav(class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top")
+        div(class="container-fluid")
+            a(class="navbar-brand" href="/main") Home
+                button(class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar")
+
+                div(class="collapse navbar-collapse" id="collapsibleNavbar")
+                    ul(class="navbar-nav")
+                        li(class="nav-item")
+                            a(class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#myModal") Info
+                        li(class="nav-item")
+                            a(class="nav-link" href="/main") Admin
+                        li(class="nav-item")
+                            a(class="nav-link" href="/ow") Wisata
+                        li(class="nav-item dropdown")
+                            a(class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown") Group
+                            ul(class="dropdown-menu")
+                                 li
+                                     a(class="dropdown-item" href="https://www.siamiruyelindo.ac.id/index.php") Si amir
+                                 li
+                                     a(class="dropdown-item" href="https://web.telegram.org/z/") Telegram
+                                 li
+                                     a(class="dropdown-item" href="https://web.whatsapp.com/") Whatsapp
+
+    div(class="modal" id="myModal")
+        div(class="modal-dialog modal-dialog-centered")
+            div(class="modal-content")
+
+                div(class="modal-header")
+                    h4(class="modal-title") Judul
+                    button(type="button" class="btn-close" data-bs-dismiss="modal")
+                div(class="modal-body")
+                    p Informasi belum tersedia
+                div(class="modal-footer")
+                    button(type="button" class="btn btn-danger" data-bs-dismiss="modal") Close
+
+    div(class="container  p-5 my-5 bg-white text-dark")
+        h1 
+            u Tabel Tamu
+        hr
+        div(class="table-responsive")
+            table(class="table table-bordered table-sm table-hover")
+                tr 
+                    th(width="70")  Id Tamu 
+                    th(width="190") Tanggal 
+                    th(width="90")  Email
+                    th(width="250") Komentar
+                    th(width="90") Ubah
+                    th(width="90") Hapus
+
+                each tb_bukutamu in tb_bukutamus 
+                    tr
+                        td #{tb_bukutamu['id_tamu']}
+                        td #{tb_bukutamu['tanggal']}
+                        td #{tb_bukutamu['email']}
+                        td #{tb_bukutamu['komentar']}
+                        td 
+                            a(class="btn btn-sm btn-outline-success" href="/editTamu?id="+ tb_bukutamu['id_tamu']) Ubah 
+                        td
+                            a(class="btn btn-sm btn btn-outline-danger" href="/deleteTamu?id="+ tb_bukutamu['id_tamu']) Hapus
+
+        div(class="btn-group btn-group-sm")
+            a(type="button" class="btn btn-primary" href="/addTamu") Tambah data
+            a(type="button" class="btn btn-success" href="/admin") Kembali
+             
+            
+        
